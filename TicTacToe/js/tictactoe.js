@@ -34,7 +34,7 @@ function placeXorO(squareNumber) {
         }
 
         //function plays placement sound
-        Audio('../media/place.mp3');
+        audio('../media/place.mp3');
         //condition checks to see if it is the computers turn
         if (activePlayer === 'O') {
             //function disables clicking for computers turn.
@@ -208,7 +208,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     // disallows clicking while the win sound plays
     disableClick();
     //line plays the win sounds
-    Audio('../media/winGame.mp3');
+    audio('../media/winGame.mp3');
     //calls main animation loop
     animateLineDrawing();
     //waits 1 sec, then clears canvas, resets game, and allows clicking again.
@@ -217,7 +217,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
 //makes body element temporarily unclickable
 function disableClick() {
     //makes body unclickable
-    body.styles.pointerEvents = 'none';
+    body.style.pointerEvents = 'none';
     //makes body clickable again after 1 sec
     setTimeout(function () { body.style.pointerEvents = 'auto'; }, 1000);
 }
