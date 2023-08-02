@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.center-container {
+    width: 608px; /*sets the width*/
+    margin: 0 auto; /*centers*/
+    margin-top: 50px; /*50px down from the top*/
+}
+
+table {
+    border-collapse: collapse; /* collapses the table border into one border*/
+    border-style: hidden; /*hides outer borders*/
+}
+
+td {
+    cursor: pointer;
+    border: 4px solid rgb(250, 205, 93); /*sets border style*/
+    padding: 0px; /* removes default padding*/
+    width: 200px;
+    height: 200px;
+    filter: contrast(3);
+}
+
+canvas {
+    position: absolute; /* sets the canvas to the top left corner of our container*/
+    z-index: 10; /*canvas over the top of the table*/
+    pointer-events: none; /*makes the canvas invisible*/
+}
