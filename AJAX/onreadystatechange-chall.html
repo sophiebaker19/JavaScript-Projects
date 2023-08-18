@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>onreadystatechange Challenge</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="content">
+            <input type="button" value="Challenge" id="btn" onclick="challFunc();">
+        </div>
+        <script type="text/javascript">
+            var chall = new XMLHttpRequest();
+            chall.open('GET', 'chall-text.html');
+            chall.onreadystatechange = function() {
+                if (chall.readyState == 4) {
+                    document.getElementById('content').innerHTML = chall.responseText;
+                }
+            }
+            function challFunc() {
+                chall.send() ;
+                document.getElementById('btn').style.display = 'none';
+            }
+
+
+        </script>
+    </body>
+</html>
