@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elements Challenge</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p>The document.URI property sets or returns a documents location</p>
+        <button onclick="Chall()">Click here for the file path</button>
+        <p id="doc"></p>
+
+        <script>
+            function Chall() {
+                let uri = document.documentURI;
+                document.getElementById("doc").innerHTML = uri;
+            }
+        </script>
+    </body>
+</html>
